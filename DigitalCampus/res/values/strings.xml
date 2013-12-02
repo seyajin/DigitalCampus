@@ -3,6 +3,15 @@
 
     <string name="app_name">DigitalCampus</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    
+    <string name="shanghai_minhang_highschool">上海市闵行中学</string>
+    <string name="shanghai_minhang_highschool_pinyin">SHANGHAI MINHANG HIGH SCHOOL</string>
+    
+    <string name="digital_campus">移动化校园数字管理平台</string>
+    
+    <string name="information_software">校园信息化软件</string>
+    <string name="entry_course">录课宝</string>
+    
+    <string name="copyright">Copyright @2013 MinHang High School. All Rights Reserved</string>
 
 </resources>
