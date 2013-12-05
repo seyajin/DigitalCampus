@@ -13,5 +13,12 @@
     <string name="entry_course">录课宝</string>
     
     <string name="copyright">Copyright @2013 MinHang High School. All Rights Reserved</string>
+    
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+    <string name="alert_dialog_sign_in">登录</string>
+    
+    <string name="account">账号</string>
+    <string name="password">密码</string>
 
 </resources>
