@@ -23,14 +23,6 @@ public class SignInActivity extends FragmentActivity {
 	}
 	
 	public void handleInformationSoftwareBtnClick(View view) {
-		if (MyPreferenceManager.getEntryCourseSignIn(this)) {
-			enterEntryCourseSystem();
-		} else {
-			showFragmentDialog(MyAlertDialogFragment.TYPE_ENTRY_COURSE);
-		}
-	}
-	
-	public void handleEntryCourseBtnClick(View view) {
 		if (MyPreferenceManager.getInformationSoftwareSignIn(this)) {
 			enterInformationSoftwareSystem();
 		} else {
@@ -38,10 +30,19 @@ public class SignInActivity extends FragmentActivity {
 		}
 	}
 	
+	public void handleEntryCourseBtnClick(View view) {
+		if (MyPreferenceManager.getEntryCourseSignIn(this)) {
+			enterEntryCourseSystem();
+		} else {
+			showFragmentDialog(MyAlertDialogFragment.TYPE_ENTRY_COURSE);
+		}
+	}
+	
 	private void enterEntryCourseSystem() {
-		// TODO
-		Intent intent = getIntent();
-		intent.putExtra("url", "");
+		Intent intent = new Intent();
+		intent.putExtra("url", "http://203.110.176.141:8080/mz/exam/index.action");
+		intent.setClass(this, MainActivity.class);
+		startActivity(intent);
 	}
 	
 	private void enterInformationSoftwareSystem() {

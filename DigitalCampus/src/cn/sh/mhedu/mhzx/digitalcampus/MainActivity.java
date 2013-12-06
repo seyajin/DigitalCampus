@@ -3,7 +3,6 @@ package cn.sh.mhedu.mhzx.digitalcampus;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -13,10 +12,15 @@ public class MainActivity extends Activity {
 	 */
 	private WebView mWebView;
 	
+	private String mUrl;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_sign_in);
+		setContentView(R.layout.activity_main);
+		
+		mUrl = getIntent().getExtras().getString("url");
+		
 		initView();
 	}
 	
@@ -24,13 +28,7 @@ public class MainActivity extends Activity {
 		mWebView = (WebView) findViewById(R.id.webview);
 		mWebView.setWebViewClient(new MyWebViewClient());
 		mWebView.getSettings().setJavaScriptEnabled(true);
-		mWebView.loadUrl("http://mhzx.mhedu.sh.cn");
-	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+		mWebView.loadUrl(mUrl);
 	}
 	
 	private class MyWebViewClient extends WebViewClient {

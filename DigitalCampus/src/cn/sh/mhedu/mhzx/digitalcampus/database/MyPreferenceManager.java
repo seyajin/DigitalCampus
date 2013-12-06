@@ -32,7 +32,7 @@ public class MyPreferenceManager {
 	 * @return default false
 	 */
 	public static boolean getEntryCourseSignIn(Context context) {
-		return getSharedPreferences(context).getBoolean(KEY_ENTRY_COURSE_SIGN_IN, false);
+		return getSharedPreferences(context).getBoolean(KEY_ENTRY_COURSE_SIGN_IN, true);
 	}
 	
 	public static void setEntryCourseAccount(Context context, String account) {
