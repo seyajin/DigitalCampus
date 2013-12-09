@@ -2,11 +2,16 @@ package cn.sh.mhedu.mhzx.digitalcampus;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity {
+	
+	private static final String TAG = "MainActivity";
+	
 	/**
 	 * WebView show main content.
 	 */
@@ -46,5 +51,24 @@ public class MainActivity extends Activity {
 	        return true;
 	    } 
 		return super.onKeyDown(keyCode, event);
+	}
+	
+	public void handleBackClick(View view) {
+		Log.d(TAG, "back");
+		if (mWebView.canGoBack()) {
+			mWebView.goBack();
+		} 
+	}
+	
+	public void handleForwardClick(View view) {
+		Log.d(TAG, "forward");
+		if (mWebView.canGoForward()) {
+			mWebView.goForward();
+		}
+	}
+	
+	public void handleRefreshClick(View view) {
+		Log.d(TAG, "refresh"); 
+		mWebView.reload();
 	}
 }
