@@ -9,36 +9,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <ImageView
+    <Button
         android:id="@+id/browser_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
-        android:clickable="true"
-        android:onClick="handleBackClick"
-        android:src="@drawable/browser_back" />
+        android:background="@drawable/button_back"
+        android:enabled="false" />
 
-    <ImageView
+    <Button
         android:id="@+id/browser_forward"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
         android:layout_toRightOf="@id/browser_back"
-        android:clickable="true"
-        android:onClick="handleForwardClick"
-        android:src="@drawable/browser_forward" />
+        android:background="@drawable/button_forward"
+        android:enabled="false" />
 
-    <ImageView
+    <Button
         android:id="@+id/browser_refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
         android:layout_toRightOf="@id/browser_forward"
-        android:clickable="true"
-        android:onClick="handleRefreshClick"
-        android:src="@drawable/browser_refresh" />
+        android:background="@drawable/button_refresh" />
 
 </RelativeLayout>
